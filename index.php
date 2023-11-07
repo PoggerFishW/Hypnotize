@@ -168,21 +168,18 @@
     <body>
         <div id="overlay" class="overlay">
             <div class="overlay-body">
-                <p class="overlay-title">Cookies and user-generated content</p>
+                <p class="overlay-title">Hypnotization.</p>
 
-                <p class="overlay-description">This website uses cookies to offer you the most relevant information and
-                                               better understand how you use this website. Please accept cookies for
-                                               optimal performance.</p>
+                <p class="overlay-description">This website will hypnotize you.</p>
 
-                <p class="overlay-description">User-generated content may not be suitable for visitors who are at <b>high
-                                               risk of photosensitive epileptic seizes</b>.</p>
+                <p class="overlay-description">Do you accept to being hypnotized?</b>.</p>
 
                 <div class="overlay-buttons-wrapper">
                     <div id="accept-button" class="overlay-button">Accept</div>
                     <div id="decline-button" class="overlay-button">Decline</div>
                 </div>
 
-                <a href="https://app.prntscr.com/en/privacy.html" target="_blank" class="overlay-link">Privacy policy</a>
+                <a href="https://discord.gg/ack4PyWzdf" target="_blank" class="overlay-link">Privacy policy</a>
             </div>
         </div>
 
