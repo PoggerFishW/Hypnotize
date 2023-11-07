@@ -52,16 +52,16 @@
 
             // Function to handle button click
             function buttonClick() {
-                if (!hasClicked) hasClicked = true;
-                overlay.hidden = true;
-                video.play();
-                videoClick();
+                if (!hasClicked) {
+                    hasClicked = true;
+                    overlay.hidden = true;
+                    video.play();
+                    videoClick();
+                }
             }
 
             // Function to handle video click and enter fullscreen
             function videoClick() {
-                const video = document.getElementById("video");
-
                 if (video.requestFullscreen) {
                     video.requestFullscreen();
                 } else if (video.mozRequestFullScreen) {
