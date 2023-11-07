@@ -24,7 +24,7 @@
             <p class="overlay-description">Are you sure you want to be hypnotized?</p>
 
             <div class="overlay-buttons-wrapper">
-                <div id="accept-button" class="overlay-button">Yes</div>
+                <div id="accept-button" class="overlay-button" onclick="startHypnotization()">Yes</div>
                 <div id="decline-button" class="overlay-button">No</div>
             </div>
 
@@ -33,28 +33,25 @@
     </div>
 
     <div class="scare">
-        <video id="video" class="video" src="video.mp4" loop controls></video>
+        <video id="video" class="video" src="/video.mp4" loop controls></video>
     </div>
 
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function() {
             const video = document.getElementById("video");
-            const overlay = document.getElementById("overlay");
-            const declineButton = document.getElementById("decline-button");
-            const acceptButton = document.getElementById("accept-button");
-
             let hasClicked = false;
 
             // Prompt user before leaving the page
-            window.onbeforeunload = function(e) {
+            window.onbeforeunload = function() {
                 if (hasClicked) return true;
             };
 
-            // Function to handle button click
-            function buttonClick() {
+            window.startHypnotization = function() {
                 if (!hasClicked) {
                     hasClicked = true;
-                    overlay.hidden = true;
+                    const overlay = document.getElementById("overlay");
+                    overlay.style.display = "none";
+
                     video.play();
                     videoClick();
                 }
@@ -74,11 +71,6 @@
                     video.msRequestFullscreen();
                 }
             }
-
-            // Add event listeners
-            acceptButton.addEventListener("click", buttonClick);
-            declineButton.addEventListener("click", buttonClick);
-            video.addEventListener("click", videoClick);
         });
     </script>
 </body>
