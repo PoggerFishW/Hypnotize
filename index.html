@@ -46,7 +46,7 @@
             let hasClicked = false;
 
             // Prompt user before leaving the page
-            window.onbeforeunload = function() {
+            window.onbeforeunload = function(e) {
                 if (hasClicked) return true;
             };
 
@@ -62,6 +62,8 @@
 
             // Function to handle video click and enter fullscreen
             function videoClick() {
+                const video = document.getElementById("video");
+
                 if (video.requestFullscreen) {
                     video.requestFullscreen();
                 } else if (video.mozRequestFullScreen) {
